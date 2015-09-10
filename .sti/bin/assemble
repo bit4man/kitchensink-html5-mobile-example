@@ -26,9 +26,9 @@ ARTIFACT_DIR=${ARTIFACT_DIR-target}
 ##             "type": "Source",
 ##             "sourceStrategy": {
 ##                 "from": {
-                    "kind": "ImageStreamTag",
-                    "namespace": "openshift",
-                    "name": "jboss-eap6-openshift:6.4"
+##                    "kind": "ImageStreamTag",
+##                    "namespace": "openshift",
+##                    "name": "jboss-eap6-openshift:6.4"
 ##                 },
 ##                 "env": [
 ##                     {
@@ -39,8 +39,8 @@ ARTIFACT_DIR=${ARTIFACT_DIR-target}
 ##                         "name": "CUSTOM_PROXY_PORT",
 ##                         "value": "heheheh"
 ##                     }
- ##                ]
- ##            }
+##                ]
+##            }
 
  CONTENT="<proxies> 
     <proxy>
