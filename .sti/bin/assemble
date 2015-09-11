@@ -49,7 +49,7 @@ ARTIFACT_DIR=${ARTIFACT_DIR-target}
       <protocol>http</protocol>
       <host>${CUSTOM_PROXY_HOST}</host>
       <port>${CUSTOM_PROXY_PORT}</port>
-      <nonProxyHosts>master.example.com,*.example.com</nonProxyHosts>
+      <nonProxyHosts>master.example.com|*.example.com</nonProxyHosts>
     </proxy>
         <proxy>
       <id>myproxy2</id>
@@ -57,7 +57,7 @@ ARTIFACT_DIR=${ARTIFACT_DIR-target}
       <protocol>https</protocol>
       <host>${CUSTOM_PROXY_HOST}</host>
       <port>${CUSTOM_PROXY_PORT}</port>
-      <nonProxyHosts>master.example.com,*.example.com</nonProxyHosts>
+      <nonProxyHosts>master.example.com|*.example.com</nonProxyHosts>
     </proxy>
   </proxies>"
 
@@ -92,7 +92,7 @@ if [ -f "$LOCAL_SOURCE_DIR/pom.xml" ]; then
   fi
 
   if [ -z "$MAVEN_ARGS" ]; then
-    export MAVEN_ARGS="package -Popenshift -DskipTests -Dcom.redhat.xpaas.repo.redhatga "
+    export MAVEN_ARGS="package -Popenshift -DskipTests -Dcom.redhat.xpaas.repo.redhatga -X "
   fi
 
   echo "Found pom.xml... attempting to build with 'mvn -e ${MAVEN_ARGS}'"
