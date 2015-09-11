@@ -101,8 +101,6 @@ if [ -f "$LOCAL_SOURCE_DIR/pom.xml" ]; then
 
   # Execute the actual build
   mvn -e $MAVEN_ARGS
-  
-sleep 5000000
 
   ERR=$?
   if [ $ERR -ne 0 ]; then
